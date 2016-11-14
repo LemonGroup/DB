@@ -18,8 +18,8 @@ ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE geekbrains.Pages (
   id int(11) NOT NULL AUTO_INCREMENT,
-  founddatetime date DEFAULT NULL,
-  lastscandate date DEFAULT NULL,
+  founddatetime datetime DEFAULT NULL,
+  lastscandate datetime DEFAULT NULL,
   url varchar(255) NOT NULL,
   siteid int(11) NOT NULL,
   PRIMARY KEY (id),
