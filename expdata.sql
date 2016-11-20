@@ -1,15 +1,12 @@
-﻿--
 -- Скрипт сгенерирован Devart dbForge Studio for MySQL, Версия 7.1.31.0
 -- Домашняя страница продукта: http://www.devart.com/ru/dbforge/mysql/studio
 -- Дата скрипта: 20.11.2016 4:11:33
 -- Версия сервера: 5.7.16
 -- Версия клиента: 4.1
---
 
+USE LEMON_STAT;
 
 SET NAMES 'utf8';
-
-
 
 INSERT INTO Groups(id, groupname) VALUES
 (1, 'LemonGroup');
@@ -35,8 +32,6 @@ INSERT INTO Tokens(id, token, accountid) VALUES
 (1, 'fake-token1', 1);
 INSERT INTO Tokens(id, token, accountid) VALUES
 (2, 'fake-token2', 2);
-
-
 
 INSERT INTO Persons(id, name, groupid) VALUES
 (1, 'Жириновский', 1);
@@ -94,7 +89,6 @@ INSERT INTO Sites(id, name, groupid) VALUES
 (5, 'rbc.ru', 3);
 INSERT INTO Sites(id, name, groupid) VALUES
 (6, 'mail.ru', 3);
-
 
 INSERT INTO Pages(id, founddatetime, lastscandate, url, siteid) VALUES
 (1, '2016-11-20 03:32:20', NULL, 'http://www.e1.ru/talk/forum/list.php?f=130', 4);
