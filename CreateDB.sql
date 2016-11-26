@@ -92,6 +92,7 @@ CREATE TABLE lemon_stat.Accounts (
   id int(11) NOT NULL AUTO_INCREMENT,
   username varchar(255) NOT NULL,
   password varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
   groupid int(11) NOT NULL,
   privilege int(11) NOT NULL,
   PRIMARY KEY (id),
