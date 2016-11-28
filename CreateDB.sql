@@ -74,6 +74,7 @@ COLLATE utf8_general_ci
 ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE lemon_stat.person_page_rank (
+  id int(11) NOT NULL AUTO_INCREMENT,
   rank int(11) DEFAULT NULL,
   personid int(11) NOT NULL,
   pageid int(11) NOT NULL,
@@ -111,8 +112,7 @@ CREATE TABLE lemon_stat.tokens (
   accountid int(11) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE INDEX tokens_uName (token),
-  CONSTRAINT PPR_fAccountId FOREIGN KEY (accountid)
-  REFERENCES lemon_stat.accounts (id) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `tokens_ibfk_1` FOREIGN KEY (`accountid`) REFERENCES `accounts` (`id`) ON DELETE CASCADE
 )
 ENGINE = INNODB
 CHARACTER SET utf8
