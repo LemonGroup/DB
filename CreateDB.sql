@@ -74,7 +74,6 @@ COLLATE utf8_general_ci
 ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE lemon_stat.person_page_rank (
-  id int(11) NOT NULL AUTO_INCREMENT,
   rank int(11) DEFAULT NULL,
   personid int(11) NOT NULL,
   pageid int(11) NOT NULL,
