@@ -106,14 +106,16 @@ COLLATE utf8_general_ci
 ROW_FORMAT = DYNAMIC;
 
 CREATE TABLE lemon_stat.tokens (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  token varchar(255) NOT NULL,
-  accountid int(11) NOT NULL,
-  PRIMARY KEY (id),
-  UNIQUE INDEX tokens_uName (token),
-  CONSTRAINT `tokens_ibfk_1` FOREIGN KEY (`accountid`) REFERENCES `accounts` (`id`) ON DELETE CASCADE
+      id int(11) NOT NULL AUTO_INCREMENT,
+      token varchar(255) NOT NULL,
+      accountid int(11) NOT NULL,
+      PRIMARY KEY (id),
+      UNIQUE INDEX tokens_uName (token),
+      CONSTRAINT `tokens_ibfk_1` FOREIGN KEY (accountid) 
+      REFERENCES lemon_stat.accounts (id) ON DELETE CASCADE
 )
 ENGINE = INNODB
 CHARACTER SET utf8
 COLLATE utf8_general_ci
 ROW_FORMAT = DYNAMIC;
+
